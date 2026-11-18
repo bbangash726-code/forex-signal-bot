@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forex Signal Bot</title>
+<style>
+body{background:#101827;color:white;font-family:Arial;text-align:center;padding:15px}
+.box{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0}
+select,button{padding:13px;margin:8px;border-radius:8px;font-size:16px}
+button{background:#16a34a;color:white;border:0}
+h1{color:#38bdf8}
+#signal{font-size:30px;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>FOREX SIGNAL BOT</h1>
+<p>1 Minute Signal System</p>
+<div class="box">
+<select id="pair">
+<option>EUR/USD</option>
+<option>GBP/USD</option>
+<option>USD/JPY</option>
+<option>AUD/USD</option>
+<option>USD/CAD</option>
+</select>
+<br>
+<button onclick="signal()">GET SIGNAL</button>
+<h2 id="signal">WAIT</h2>
+<p id="info">Signal ka intezar karein</p>
+</div>
+<script>
+function signal(){
+let s=["BUY","SELL","WAIT"];
+let result=s[Math.floor(Math.random()*3)];
+document.getElementById("signal").innerText=result;
+document.getElementById("info").innerText=
+"Demo signal only - Live market data nahi";
+}
+</script>
+</body>
+</html>
